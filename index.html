@@ -1,0 +1,183 @@
+<!-- Modified W3.CSS Template -->
+<!DOCTYPE html>
+<html>
+<title>Eric Siu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+h3 {
+
+	font-family: "Bilbao";
+}
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+a{
+	text-decoration: none;
+}
+
+.eric_photo {
+  width: 200px;
+  height: 200px;
+  background: url(./profile.jpeg) no-repeat center center;
+  background-size: cover;
+  margin: 0 auto;
+  border-radius: 120px;
+  border: 2px solid #03c4a4;
+}
+/* Full height image header */
+.bgimg-1 {
+  height: 75%;
+}
+
+.about {
+	border-bottom: 3px solid #008080;
+	border-top: 3px solid #008080;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-light-grey w3-card" id="myNavbar">
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#projects" class="w3-bar-item w3-button"> PROJECTS</a>
+      <a href="./resume.pdf" target='_blank' class="w3-bar-item w3-button"> RESUME</a>
+      <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
+  <a href="#resume" onclick="w3_close()" class="w3-bar-item w3-button">RESUME</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-topmiddle w3-text-teal" style="padding:96px">
+    <p><a class="w3-white w3-text-teal w3-padding-small w3-jumbo w3-margin-top w3-opacity w3-hover-opacity-off">Eric Siu</a></p>
+  </div> 
+  <div class="eric_photo w3-display-middle"> </div>
+  <div class="w3-display-bottommiddle w3-text-teal w3-xxlarge" style="padding:100px ">
+    <a href="https://www.github.com/siueric0010" target='_blank' class="fa fa-github w3-hover-opacity" ></a>
+    <a href="https://www.linkedin.com/in/esiu/" target='_blank' class="fa fa-linkedin w3-hover-opacity"></a>
+    <a href="mailto:siueric0010@gmail.com" class="fa fa-envelope w3-hover-opacity"></a>
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:10px 16px" id="about">
+  <h3 class="w3-center w3-text-black about" >ABOUT ME</h3>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-institution w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Education</p>
+      <p>I'm currently getting my <b>BS</b> in <b>Computer Engineering</b> at <b>UC San Diego</b>, planning to graduate in <b>June 2021</b>, then possibly continue with a <b>MS</b> in <b>Computer Engineering</b></p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-info-circle w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Current Goals</p>
+      <p>I am looking for an <b>internship for Summer 2020</b> and am interested in exploring any field of CE/CS, such as computer architecture, integrated circuits, security, and robotics.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-sun-o w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Future Goals</p>
+      <p>I hope to maximize my learning experiences and interactions, so that I can create practical solutions that are ethically and fundamentally positive.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heartbeat w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Other Interests</p>
+      <p>Besides engineering, I am interested in kendo and gaming. Both serve great teachers in teamwork and the importance of communication.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Projects Section -->
+<div class="w3-container w3-dark-grey" style="padding:32px 16px" id="projects">
+  <h3 class="w3-center">PROJECTS</h3>
+
+  <div class="w3-row-padding " style="margin-top:32px; margin-bottom: 32px">
+    <div class="w3-col l4 m6 w3-card w3-center" style="padding-left: 5px; padding-right: 5px">
+      <img src="./whitespace.png" style="width: 100%; cursor: pointer" onclick="onClick(this)" class="w3-hover-opacity" alt="Network Measurement and Analysis for Security and Performance  [Oct '19 - Present]">
+    </div>
+    <div class="w3-col l4 m6 w3-card w3-center">
+      <img src="./messengerbot.JPG" style="width:100%; padding-left: 5px; padding-right: 5px; cursor: pointer" onclick="onClick(this)" class="w3-hover-opacity" alt="Dining Hall Messenger Bot [May '19 - Present] [Python, Flask, Glitch]">
+    </div>
+    <div class="w3-col l4 m6 w3-card w3-center">
+      <img src="./AfterMath.JPG" style="width:100%; padding-left: 5px; padding-right: 5px; cursor: pointer" onclick="onClick(this)" class="w3-hover-opacity" alt="Aftermath Web App (CA-39 Congressional App Challenge 1st Place) ['16-'17] [Javascript]">
+    </div>
+  </div>
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">X</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.github.com/siueric0010" target='_blank' class="fa fa-github w3-hover-opacity" ></a>
+    <a href="https://www.linkedin.com/in/esiu/" target='_blank' class="fa fa-linkedin w3-hover-opacity"></a>
+    <a href="mailto:siueric0010@gmail.com" class="fa fa-envelope w3-hover-opacity"></a>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
