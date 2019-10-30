@@ -121,33 +121,33 @@ a{
   <!-- Activ5 Music, ERSP, Messenger-->
   <div class="w3-row-padding " style="margin-top:32px; margin-bottom: 32px">
     <div class="w3-col l4 m6 w3-card w3-center" style="padding-left: 5px; padding-right: 5px">
-      <img src="./Activ5_Music.jpg" style="height: 325px; cursor: pointer" onclick="onClick(this)" class="w3-hover-opacity" alt="Activ5 Music Android App (Kotlin) SD Hacks 2019">
+      <img src="./Activ5_Music.jpg" style="height: 325px; cursor: pointer" onclick="onClick(this, 'https://devpost.com/software/activ5-music')" class="w3-hover-opacity" alt="Activ5 Music Android App (Kotlin) SD Hacks 2019">
     </div>
     <div class="w3-col l4 m6 w3-card w3-center" style="padding-left: 5px; padding-right: 5px">
-      <img src="./whitespace.png" style="width: 100%; cursor: pointer" onclick="onClick(this)" class="w3-hover-opacity" alt="Network Measurement and Analysis for Security and Performance Undergrad Research [Oct '19 - Present]">
+      <img src="./whitespace.png" style="width: 100%; cursor: pointer" onclick="onClick(this,'http://ersp.ucsd.edu/')" class="w3-hover-opacity" alt="Network Measurement and Analysis for Security and Performance Undergrad Research [Oct '19 - Present]">
     </div>
     <div class="w3-col l4 m6 w3-card w3-center">
-      <img src="./messengerbot.JPG" style="width:100%; padding-left: 5px; padding-right: 5px; cursor: pointer" onclick="onClick(this)" class="w3-hover-opacity" alt="Dining Hall Messenger Bot [May '19 - Present] [Python, Flask, Glitch]">
+      <img src="./messengerbot.JPG" style="width:100%; padding-left: 5px; padding-right: 5px; cursor: pointer" onclick="onClick(this, 'https://github.com/siueric0010/dining_bot')" class="w3-hover-opacity" alt="Dining Hall Messenger Bot [May '19 - Present] [Python, Flask, Glitch]">
     </div>
   </div>
 
   <!-- Aftermath, Danger Tracker-->
   <div class="w3-row-padding " style="margin-top:32px; margin-bottom: 32px">
     <div class="w3-col l4 m6 w3-card w3-center">
-      <img src="./AfterMath.JPG" style="width: 90%; height: 325px; padding-left: 5px; padding-right: 5px; cursor: pointer" onclick="onClick(this)" class="w3-hover-opacity" alt="Aftermath Web App (CA-39 Congressional App Challenge 1st Place) ['16-'17] [Javascript]">
+      <img src="./AfterMath.JPG" style="width: 90%; height: 325px; padding-left: 5px; padding-right: 5px; cursor: pointer" onclick="onClick(this, 'https://github.com/siueric0010/aftermath')" class="w3-hover-opacity" alt="Aftermath Web App (CA-39 Congressional App Challenge 1st Place) ['16-'17] [Javascript]">
     </div>
     <div class="w3-col l4 m6 w3-card w3-center">
-      <img src="./Danger_Tracker.jpg" style="height: 325px; padding-left: 5px; padding-right: 5px; cursor: pointer" onclick="onClick(this)" class="w3-hover-opacity" alt="Danger Tracker MenloHacks II (Java)">
+      <img src="./Danger_Tracker.jpg" style="height: 325px; padding-left: 5px; padding-right: 5px; cursor: pointer" onclick="onClick(this, 'https://devpost.com/software/dangertracker')" class="w3-hover-opacity" alt="Danger Tracker MenloHacks II (Java)">
     </div>
   </div>
 
 
 <!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">X</span>
+<div id="modal01" class="w3-modal w3-black" >
+  <span id="modal_X"; class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topleft" onclick = "this.parentElement.style.display = 'none'" title="Close Modal Image">X</span>
   <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
+    <img  id="img01" class="w3-image">
+    <a style="text-decoration: underline; text-decoration-color: #008080;"; id="caption" class="w3-opacity w3-large"></a>
   </div>
 </div>
 
@@ -164,11 +164,15 @@ a{
  
 <script>
 // Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
+function onClick(element, link) {
+  var image = document.getElementById("img01");
+  var modal01 = document.getElementById("modal01");
+  image.src = element.src;
+  modal01.style.display = "block";
   var captionText = document.getElementById("caption");
+  captionText.href = link;
   captionText.innerHTML = element.alt;
+  captionText.setAttribute("target", '_blank');
 }
 
 
