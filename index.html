@@ -22,12 +22,12 @@ a{
 	text-decoration: none;
 }
 .eric_photo {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   background: url(./profile.png) no-repeat center center;
   background-size: cover;
   margin: 0 auto;
-  border-radius: 120px;
+  border-radius: 200px;
   border: 2px solid #03c4a4;
 }
 /* Full height image header */
@@ -79,7 +79,8 @@ a{
     <p><a class="w3-white w3-text-teal w3-padding-small w3-jumbo w3-margin-top w3-opacity w3-hover-opacity-off w3-mobile">Eric Siu</a></p>
   </div> 
   <div class="eric_photo w3-display-middle " style=""> </div>
-  <div class="w3-display-bottommiddle w3-text-teal w3-xxlarge " style="padding: 110px; min-width: 340px">
+  
+  <div class="w3-display-bottommiddle w3-text-teal w3-xxlarge " id="contact" style="padding: 110px; min-width: 340px">
     <a href="https://www.github.com/siueric0010" target='_blank' class="fa fa-github w3-hover-opacity" ></a>
     <a href="https://www.linkedin.com/in/esiu/" target='_blank' class="fa fa-linkedin w3-hover-opacity"></a>
     <a href="mailto:me@eric-siu.com" class="fa fa-envelope w3-hover-opacity"></a>
@@ -88,7 +89,7 @@ a{
 
 <!-- About Section -->
 <div class="w3-container" style="padding:10px 16px" id="about">
-  <h3 class="w3-center w3-text-black about" >ABOUT ME (WIP, Needs Updating)</h3>
+  <h3 class="w3-center w3-text-black about" >ABOUT ME</h3>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">
       <i class="fa fa-info-circle w3-margin-bottom w3-jumbo"></i>
@@ -98,17 +99,17 @@ a{
     <div class="w3-quarter">
       <i class="fa fa-institution w3-margin-bottom w3-jumbo w3-center"></i>
       <p class="w3-large">Education</p>
-      <p>I have received my <b>Computer Engineering B.S. at UC San Diego</b> . I'm currently getting my <b>M.S.</b> in <b>Computer Engineering</b> at UC San Diego, planning to graduate in <b>June 2023</b>.</p>
+      <p>I have received my <b>Computer Engineering B.S. at UC San Diego</b>. I'm currently getting my <b>M.S.</b> in <b>Computer Engineering</b> at UC San Diego, planning to graduate in <b>June 2023</b>.</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-sun-o w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">Future Goals</p>
-      <p>I hope to maximize my learning experiences and interactions, so that I can create practical solutions that are ethically and fundamentally positive.</p>
+      <p>My future goals are always changing, but the only constant is growth and change. Only with change, I can create inventive solutions to complex problems and inspire others. My goal for 2022 is to publish a game and update this website.</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-heartbeat w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">Interests</p>
-      <p>I interested in exploring any field of CE/CS, but I am mainly focused on embedded systems, operating systems, and game development. Besides engineering, I am interested in gaming.</p>
+      <p>My main interests are in embedded systems, operating systems, and game development. But, I am open to hearing and learning about any field in Computer Engineering and Computer Science.  Outside of engineering, I am interested in gaming.</p>
     </div>
   </div>
 </div>
@@ -116,7 +117,25 @@ a{
 
 <!-- Projects Section -->
 <div class="w3-container w3-dark-grey" style="padding:32px 16px" id="projects">
-  <h3 class="w3-center">PROJECTS (WIP, Needs Updating)</h3>
+  <h3 class="w3-center">PROJECTS</h3>
+
+  <!-- GrieVe-->
+  <div class="w3-row-padding " style="margin-top:32px; margin-bottom: 32px">
+      <img src="./grieve.png" style="height: 575px; display: block; margin-left: auto; margin-right: auto; cursor: pointer" onclick="onClick(this, 'https://www.youtube.com/watch?v=qfZCpvR-f60')" class="w3-hover-opacity" alt="GrieVe [Mar '21 - Jun '21] 3v1 PvP 2.5D Local Multiplayer Game">
+  </div>
+
+  <!-- PrivTag, CSE 221 System Project, CSE 110 KIWI-->
+  <div class="w3-row-padding " style="margin-top:32px; margin-bottom: 32px">
+    <div class="w3-col l4 m6 w3-card w3-center" style="padding-left: 5px; padding-right: 5px">
+      <img src="./priv-tag.png" style="height: 325px; cursor: pointer" onclick="onClick(this, 'https://devpost.com/software/activ5-music')" class="w3-hover-opacity" alt="PrivTag | Wireless Embedded Systems [Jan '21 - Mar '21] Power Optimization, I2C, SPI, Bluetooth Low Energy for Tag Tracking">
+    </div>
+    <div class="w3-col l4 m6 w3-card w3-center" style="padding-left: 5px; padding-right: 5px">
+      <img src="./Raspberry_Pi_OS_Logo.png" style="height: 325px; cursor: pointer" onclick="onClick(this,'https://cseweb.ucsd.edu/classes/wi21/cse221-a/')" class="w3-hover-opacity" alt="Raspbian GNU/Linux OS Measurement on Raspberry Pi 4B [Jan '21 - Mar '21]">
+    </div>
+    <div class="w3-col l4 m6 w3-card w3-center">
+      <img src="./kiwi.png" style="height: 325px; padding-left: 5px; padding-right: 5px; cursor: pointer" onclick="onClick(this, 'https://github.com/siueric0010/dining_bot')" class="w3-hover-opacity" alt="KIWI [Mar '20 - Jun '20] Software Lead [NodeJS, Javascript, Firebase, Heroku]">
+    </div>
+  </div>
 
   <!-- Activ5 Music, ERSP, Messenger-->
   <div class="w3-row-padding " style="margin-top:32px; margin-bottom: 32px">
@@ -124,10 +143,10 @@ a{
       <img src="./Activ5_Music.jpg" style="height: 325px; cursor: pointer" onclick="onClick(this, 'https://devpost.com/software/activ5-music')" class="w3-hover-opacity" alt="Activ5 Music Android App (Kotlin) SD Hacks 2019">
     </div>
     <div class="w3-col l4 m6 w3-card w3-center" style="padding-left: 5px; padding-right: 5px">
-      <img src="./whitespace.png" style="width: 100%; cursor: pointer" onclick="onClick(this,'http://ersp.ucsd.edu/')" class="w3-hover-opacity" alt="Network Measurement and Analysis for Security and Performance Undergrad Research [Oct '19 - Present]">
+      <img src="./ersp_poster_2019.png" style="height: 325px; cursor: pointer" onclick="onClick(this,'https://drive.google.com/file/d/1mrJ3jLbxQ77gbNnDJpVwKqkPgbYbL-TK/view')" class="w3-hover-opacity" alt="Brave New World | Website Resource Analysis [Oct '19 - Jul '21]">
     </div>
     <div class="w3-col l4 m6 w3-card w3-center">
-      <img src="./messengerbot.JPG" style="width:100%; padding-left: 5px; padding-right: 5px; cursor: pointer" onclick="onClick(this, 'https://github.com/siueric0010/dining_bot')" class="w3-hover-opacity" alt="Dining Hall Messenger Bot [May '19 - Present] [Python, Flask, Glitch]">
+      <img src="./messengerbot.JPG" style="height: 325px; padding-left: 5px; padding-right: 5px; cursor: pointer;  " onclick="onClick(this, 'https://github.com/siueric0010/dining_bot')" class="w3-hover-opacity" alt="Dining Hall Messenger Bot [May '19 - Jul '19] [Python, Flask, Glitch]">
     </div>
   </div>
 
@@ -143,6 +162,7 @@ a{
       <img src="./OmiPets.JPG" style="height: 325px; padding-left: 5px; padding-right: 5px; cursor: pointer" onclick="onClick(this, 'https://github.com/siueric0010/o-mi-pets')" class="w3-hover-opacity" alt="OmiPets CA-39 Best Gaming App (Java)">
     </div>
   </div>
+</div>
 
 
 <!-- Modal for full size images on click-->
@@ -150,6 +170,7 @@ a{
   <span id="modal_X"; class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topleft" onclick = "this.parentElement.style.display = 'none'" title="Close Modal Image">X</span>
   <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
     <img  id="img01" class="w3-image">
+    <div> </div>
     <a style="text-decoration: underline; text-decoration-color: #008080;"; id="caption" class="w3-opacity w3-large"></a>
   </div>
 </div>
